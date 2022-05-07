@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181F22"
+    android:padding="10dp"
+    tools:context=".LoginActivity">
+
+    <EditText
+        android:id="@+id/username1"
+        android:layout_width="344dp"
+        android:layout_height="65dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="27dp"
+        android:background="@drawable/custom_input"
+        android:drawableEnd="@drawable/ic_baseline_person_24"
+        android:hint="    Enter User Name"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="#F3F0F0"
+        android:textColorHint="#B39D7E" />
+
+    <EditText
+        android:id="@+id/password1"
+        android:layout_width="344dp"
+        android:layout_height="65dp"
+        android:layout_below="@+id/username1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="27dp"
+        android:autofillHints=""
+        android:background="@drawable/custom_input"
+        android:drawableEnd="@drawable/ic_baseline_lock_24"
+        android:ems="10"
+        android:hint="Password"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="#F3F0F0"
+        android:textColorHint="#B39D7E" />
+
+    <Button
+        android:id="@+id/btnsignin1"
+        android:layout_width="185dp"
+        android:layout_height="76dp"
+        android:layout_below="@+id/password1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="109dp"
+        android:backgroundTint="#A1FF9800"
+        android:text="Sign in"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="210dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="26dp"
+        app:srcCompat="@drawable/moviebox" />
+</RelativeLayout>
