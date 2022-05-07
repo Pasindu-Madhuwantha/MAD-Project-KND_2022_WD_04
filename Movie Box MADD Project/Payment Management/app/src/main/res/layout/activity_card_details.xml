@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardDetails"
+    android:orientation="vertical"
+    android:background="#003549"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/card_details"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/card_number"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            app:boxStrokeColor="#ffffff"
+            android:textColorHint="#ffffff"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_baseline_credit_card_24"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/card_holder_name"
+            android:layout_marginBottom="20dp"
+            app:boxStrokeColor="#ffffff"
+            android:textColorHint="#ffffff"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/holderName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_baseline_person_24"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/expiration_date"
+            android:layout_marginBottom="20dp"
+            app:boxStrokeColor="#ffffff"
+            android:textColorHint="#ffffff"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/expDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_baseline_calendar_today_24"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/cvv"
+            android:layout_marginBottom="20dp"
+            app:boxStrokeColor="#ffffff"
+            android:textColorHint="#ffffff"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cvv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_baseline_lock_24"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save_payment_details"
+            android:gravity="right"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cansel"
+                android:backgroundTint="#FFA500"
+                android:layout_marginRight="8dp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:backgroundTint="#FFA500"
+                android:layout_marginRight="8dp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:textColor="@color/white"/>
+
+            <Button
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFA500"
+                android:onClick="btnSave"
+                android:text="@string/pay"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
