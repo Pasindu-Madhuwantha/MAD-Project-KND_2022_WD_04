@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Payment</string>
+    <string name="sample">This is a sample</string>
+    <string name="movie_seat_number">Movie seat number</string>
+    <string name="ticket_count_full">Ticket count (Full)</string>
+    <string name="ticket_count_half">Ticket count (Half)</string>
+    <string name="type">Type</string>
+    <string name="back">Get Total</string>
+    <string name="next">Next</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="name">Full name</string>
+    <string name="address">Address</string>
+    <string name="email">Email Address</string>
+    <string name="mobile">Mobile Number</string>
+    <string name="card_details">Card Details</string>
+    <string name="card_number">Card Number</string>
+    <string name="card_holder_name">Card holder name</string>
+    <string name="expiration_date">Expiration date</string>
+    <string name="cvv">CVV</string>
+    <string name="save_payment_details">Save payment details</string>
+    <string name="cansel">Cansel</string>
+    <string name="pay">Pay</string>
+    <string name="invoice_details">Invoice Details</string>
+    <string name="invoice_001">Invoice 001</string>
+    <string name="title_activity_admin">admin</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_login">LoginActivity</string>
+</resources>
