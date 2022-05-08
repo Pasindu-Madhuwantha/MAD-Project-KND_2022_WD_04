@@ -4,69 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#181F22"
     android:padding="10dp"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="396dp"
+        android:layout_height="248dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="5dp"
+        app:srcCompat="@drawable/moviebox" />
+
     <TextView
-        android:id="@+id/texttitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Please enter the details below"
-        android:textSize="24dp"
-        android:layout_marginTop="20dp"/>
-
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/texttitle"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        android:textSize="24dp" />
-
-    <EditText
-        android:id="@+id/contact"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/name"
-        android:hint="Contact"
-        android:inputType="textPersonName"
-        android:textSize="24dp" />
-    <EditText
-        android:id="@+id/dob"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Date of Birth"
-        android:textSize="24dp"
-        android:layout_below="@+id/contact"
-        android:inputType="number"/>
-    <Button
-        android:id="@+id/btnInsert"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24dp"
-        android:text="Insert New Data"
-        android:layout_marginTop="30dp"
-        android:layout_below="@id/dob"/>
-    <Button
-        android:id="@+id/btnUpdate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24dp"
-        android:text="Update Data"
-        android:layout_below="@id/btnInsert"/>
-    <Button
-        android:id="@+id/btnDelete"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24dp"
-        android:text="Delete Existing Data"
-        android:layout_below="@id/btnUpdate"/>
+        android:id="@+id/textView"
+        android:layout_width="344dp"
+        android:layout_height="104dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="328dp"
+        android:layout_marginEnd="23dp"
+        android:text="Contact us by sending email"
+        android:textColor="@color/white"
+        android:textSize="34sp" />
 
     <Button
-        android:id="@+id/btnView"
-        android:layout_width="match_parent"
+        android:id="@+id/btn1"
+        android:layout_width="181dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnDelete"
-        android:text="View Data"
-        android:textSize="24dp" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="497dp"
+        android:layout_marginEnd="105dp"
+        android:background="@android:color/holo_orange_light"
+        android:text="Send an Email"
+        android:textColor="@color/white" />
 </RelativeLayout>
