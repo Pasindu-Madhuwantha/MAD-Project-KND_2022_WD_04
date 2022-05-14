@@ -48,7 +48,7 @@ public class MovieList extends AppCompatActivity {
         setContentView(R.layout.activity_main8);
 
 
-        //Get the movie image
+        //Get the movie image for update window
         mGetcontent3 =registerForActivityResult(new ActivityResultContracts.GetContent(), new ActivityResultCallback<Uri>() {
             @Override
             public void onActivityResult(Uri result) {
@@ -68,7 +68,7 @@ public class MovieList extends AppCompatActivity {
 
         });
 
-        //get the cover image
+        //get the cover image for update window
 
         mGetcontent4 =registerForActivityResult(new ActivityResultContracts.GetContent(), new ActivityResultCallback<Uri>() {
             @Override
@@ -188,6 +188,46 @@ public class MovieList extends AppCompatActivity {
         coverimage1=(ImageView) dialog.findViewById(R.id.coverimage1);
         final EditText description=(EditText) dialog.findViewById(R.id.moviedescription);
         Button btnUpdate=(Button) dialog.findViewById(R.id.buttonUpdate);
+
+        // get data of row  clicked from sqlite
+
+        Cursor cursor =MainActivity6.sqLiteHelper.getData("SELECT* FROM MOVIES WHERE id="+position);
+        list.clear();
+        while (cursor.moveToNext()){
+            int id=cursor.getInt(0);
+            String movienameupdate=cursor.getString(1);
+            moviename.setText(movienameupdate); //set moivename to dialog update
+
+            String movietypeupdate=cursor.getString(2);
+            movietype.setText(movietypeupdate);
+
+            String moviehoursupdate=cursor.getString(3);
+            moviehours.setText(moviehoursupdate);
+
+            String moviestatusupdate=cursor.getString(4);
+            moviestatus.setText(moviestatusupdate);
+
+            byte [] moiveimage11=cursor.getBlob(5);
+            movieimage1.setImageBitmap(BitmapFactory.decodeByteArray(moiveimage11,0,moiveimage11.length));
+
+            byte [] coverimage11=cursor.getBlob(6);
+            coverimage1.setImageBitmap(BitmapFactory.decodeByteArray(coverimage11,0,coverimage11.length));
+
+            String moiveupdatedescription=cursor.getString(7);
+            description.setText(moiveupdatedescription);
+
+
+             Movies moviesUpdate= new Movies(id,movienameupdate,moiveimage11);
+
+             moviesUpdate.MoivesUpdate(id,movienameupdate,movietypeupdate,moviestatusupdate,moviehoursupdate,moiveupdatedescription,moiveimage11,coverimage11);
+
+            list.add(moviesUpdate);
+
+        }
+
+
+
+
 
 
         // set width for dialog

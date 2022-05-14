@@ -35,7 +35,6 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         statement.bindString(7,Description);
 
         statement.executeInsert();
-
     }
 
     public void updateData(String MovieName,String MovieType,String Hours,String Status,byte[] movieimage,byte[] coverimage,String Description,int id){

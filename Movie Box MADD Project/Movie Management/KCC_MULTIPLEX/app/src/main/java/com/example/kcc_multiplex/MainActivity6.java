@@ -150,6 +150,7 @@ public class MainActivity6 extends AppCompatActivity {
 
     }
 
+        //convert to byte
     public static byte[] movieimageToByte(ImageView image) {
         Bitmap bitmap = ((BitmapDrawable)image.getDrawable()).getBitmap();
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
